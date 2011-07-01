@@ -8,6 +8,7 @@ syntax enable
 set ruler
 set autoindent
 set hlsearch
+set incsearch
 set ignorecase
 set smartcase
 set tabstop=4
@@ -28,11 +29,15 @@ set enc=utf-8 gfn=Menlo:h10
 set mousehide
 
 let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:easytags_always_enabled = 1
 set tags=./.tags;,~/.vimtags
+
+" annoying shift mistakes
+cmap W w
 
 " set up syntax completion
 filetype plugin on
-imap <Tab> <C-x><C-o>
+imap <C-Tab> <C-x><C-o>
 
 " custom syntax highlighting rules
 filetype on
