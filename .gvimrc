@@ -1,5 +1,5 @@
-set lines=55
-set columns=200
+set lines=100
+set columns=150
 set guioptions-=T
 
 set t_Co=256
@@ -16,19 +16,24 @@ set cursorline
 
 set shiftround
 
-colorscheme wombat
+colorscheme desert_nobold
 
 nmap <C-N><C-N> :set invnumber<CR>
+nmap <C-S> :silent noh<CR>
 set number
 set numberwidth=4
 
 hi LineNr guibg=grey17 guifg=grey40
-set noanti enc=utf-8 gfn=Monaco:h10
+set enc=utf-8 gfn=Menlo:h10
 set mousehide
 
 let g:easytags_cmd = '/usr/local/bin/ctags'
 set tags=./.tags;,~/.vimtags
 
-# custom syntax highlighting rules
+" set up syntax completion
+filetype plugin on
+imap <Tab> <C-x><C-o>
+
+" custom syntax highlighting rules
 filetype on
 au BufNewFile,BufRead *.less set filetype=css
