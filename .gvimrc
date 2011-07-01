@@ -10,7 +10,7 @@ set autoindent
 set hlsearch
 set ignorecase
 set smartcase
-set tabstop=8
+set tabstop=4
 set shiftwidth=4
 set cursorline
 
@@ -28,3 +28,7 @@ set mousehide
 
 let g:easytags_cmd = '/usr/local/bin/ctags'
 set tags=./.tags;,~/.vimtags
+
+# custom syntax highlighting rules
+filetype on
+au BufNewFile,BufRead *.less set filetype=css
