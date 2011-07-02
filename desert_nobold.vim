@@ -55,7 +55,8 @@ hi Constant	guifg=#ffa933
 hi Identifier	guifg=#ffdd9e
 hi Statement	guifg=khaki
 hi PreProc	guifg=indianred
-hi Type		guifg=darkkhaki
+" hi Type		guifg=darkkhaki
+hi Type		guifg=#fff2ca term=none cterm=none gui=none
 hi Special	guifg=navajowhite
 "hi Underlined
 hi Ignore	guifg=grey40
