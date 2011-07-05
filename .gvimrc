@@ -18,6 +18,7 @@ set cursorline
 set shiftround
 
 colorscheme desert_nobold
+HourColor()
 
 nmap <C-N><C-N> :set invnumber<CR>
 nmap <C-S> :silent noh<CR>
@@ -25,7 +26,7 @@ set number
 set numberwidth=4
 
 hi LineNr guibg=grey17 guifg=grey40
-set enc=utf-8 gfn=Menlo:h10
+set enc=utf-8 gfn=Consolas:h12
 set mousehide
 
 let g:easytags_cmd = '/usr/local/bin/ctags'
@@ -41,4 +42,4 @@ imap <C-Tab> <C-x><C-o>
 
 " custom syntax highlighting rules
 filetype on
-au BufNewFile,BufRead *.less set filetype=css
+au BufNewFile,BufRead *.less set filetype=less
