@@ -7,26 +7,29 @@ syntax enable
 
 set ruler
 set autoindent
-set hlsearch
+" set hlsearch
 set incsearch
 set ignorecase
 set smartcase
 set tabstop=4
 set shiftwidth=4
 set cursorline
+set foldmethod=marker
+set fen
 
 set shiftround
 
-colorscheme desert_nobold
-HourColor()
+colorscheme candycode
 
 nmap <C-N><C-N> :set invnumber<CR>
 nmap <C-S> :silent noh<CR>
 set number
 set numberwidth=4
 
-hi LineNr guibg=grey17 guifg=grey40
-set enc=utf-8 gfn=Consolas:h12
+hi LineNr guibg=grey10 guifg=grey30
+hi Folded guibg=#1d1d1d guifg=#808080 gui=none
+
+set enc=utf-8 gfn=Consolas:h11
 set mousehide
 
 let g:easytags_cmd = '/usr/local/bin/ctags'
@@ -43,3 +46,6 @@ imap <C-Tab> <C-x><C-o>
 " custom syntax highlighting rules
 filetype on
 au BufNewFile,BufRead *.less set filetype=less
+
+" stop cursor blinking
+set guicursor+=n-v-c:blinkon0
